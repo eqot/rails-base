@@ -17,6 +17,11 @@ group :development, :test do
   gem 'childprocess'
 end
 
+group :development do
+  gem 'guard-livereload', require: false
+  gem 'rack-livereload'
+end
+
 group :test do
   gem 'capybara', '2.2.1'
 end
