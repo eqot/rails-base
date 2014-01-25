@@ -10,6 +10,20 @@ group :development, :test do
   gem 'sqlite3'
 
   gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'growl'
+  gem 'spork-rails'
+  gem 'guard-spork'
+  gem 'childprocess'
+end
+
+group :development do
+  gem 'guard-livereload', require: false
+  gem 'rack-livereload'
+end
+
+group :test do
+  gem 'capybara', '2.2.1'
 end
 
 # Use SCSS for stylesheets
