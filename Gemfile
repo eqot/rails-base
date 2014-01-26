@@ -26,6 +26,9 @@ group :test do
   gem 'capybara', '2.2.1'
 end
 
+# Use device for account management
+gem 'devise'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

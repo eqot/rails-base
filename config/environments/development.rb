@@ -32,4 +32,7 @@ RailsBase::Application.configure do
 
   # Log level.
   config.log_level = :info
+
+  # Settings for devise.
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end
