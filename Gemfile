@@ -20,6 +20,12 @@ end
 group :development do
   gem 'guard-livereload', require: false
   gem 'rack-livereload'
+
+  # Use capistrano for deployment
+  gem 'capistrano'
+  gem 'capistrano-rvm'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
 end
 
 group :test do
