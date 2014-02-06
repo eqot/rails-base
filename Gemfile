@@ -37,6 +37,9 @@ gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails"
 
+# Use simple_form for forms
+gem 'simple_form'
+
 # Use device for account management
 gem 'devise'
 
