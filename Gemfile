@@ -32,6 +32,14 @@ group :test do
   gem 'capybara', '2.2.1'
 end
 
+# Use bootstrap for views
+gem "therubyracer"
+gem "less-rails"
+gem "twitter-bootstrap-rails"
+
+# Use simple_form for forms
+gem 'simple_form'
+
 # Use device for account management
 gem 'devise'
 
