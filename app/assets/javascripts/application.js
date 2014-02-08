@@ -15,5 +15,6 @@
 //= require jquery.turbolinks
 //= require bootstrap/transition
 //= require bootstrap/collapse
+//= require bootstrap/dropdown
 //= require turbolinks
 //= require_tree .
