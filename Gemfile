@@ -32,19 +32,14 @@ group :test do
   gem 'capybara', '2.2.1'
 end
 
-# Use bootstrap for views
-gem "therubyracer"
-gem "less-rails"
-gem "twitter-bootstrap-rails"
-
-# Use simple_form for forms
-gem 'simple_form'
-
 # Use device for account management
 gem 'devise'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
+
+# Use bootstrap-sass for views
+gem 'bootstrap-sass', '~> 3.1.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -57,6 +52,9 @@ gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
+
+# Use jquery-turbolinks to fix onready event issue
+gem 'jquery-turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
