@@ -1,8 +1,10 @@
 'use strict';
 
 $(function () {
-  $('#menu li').click(function (e) {
-    // $('#menu').children().removeClass('active');
-    $(this).addClass('active');
+  var pathname = location.pathname;
+  $('#menu li a').each(function (index, element) {
+    if (element.pathname === pathname) {
+      $(element).parent().addClass('active');
+    }
   });
 });
