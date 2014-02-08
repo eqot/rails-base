@@ -1,21 +1,52 @@
-<h2>Sign up</h2>
+<% provide(:title, "Sign up") %>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+<div class="container">
+  <h1>Sign up</h1>
 
-  <div><%= f.label :username %><br />
-  <%= f.text_field :username, :autofocus => true %></div>
+  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => "form-horizontal"}) do |f| %>
+    <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+    <div class="form-group">
+      <%= f.label :username, "Name", class: "col-lg-4 control-label", for: "inputName" %>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+      <div class="col-lg-4">
+        <%= f.text_field :username, class: "form-control", id: "inputName", autofocus: true %>
+      </div>
+    </div>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+    <div class="form-group">
+      <%= f.label :email, class: "col-lg-4 control-label", for: "inputEmail" %>
 
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
+      <div class="col-lg-4">
+        <%= f.email_field :email, class: "form-control", id: "inputEmail" %>
+      </div>
+    </div>
 
-<%= render "devise/shared/links" %>
+    <div class="form-group">
+      <%= f.label :password, class: "col-lg-4 control-label", for: "inputPassword" %>
+
+      <div class="col-lg-4">
+        <%= f.password_field :password, class: "form-control", id: "inputPassword" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :password_confirmation, class: "col-lg-4 control-label", for: "inputConfirmation" %>
+
+      <div class="col-lg-4">
+        <%= f.password_field :password_confirmation, class: "form-control", id: "inputConfirmation" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-lg-offset-4 col-lg-6">
+        <%= f.submit 'Sign up', class: "btn btn-primary" %>
+        <%= link_to "Cancel", root_path, class: "btn btn-default" %>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="col-lg-offset-4 col-lg-6">
+    <%= render "devise/shared/links" %>
+  </div>
+</div>
