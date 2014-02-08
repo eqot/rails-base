@@ -2,7 +2,9 @@ RailsBase::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Add Rack::LiveReload to the bottom of the middleware stack with the default options.
-  config.middleware.use Rack::LiveReload
+  config.middleware.use(Rack::LiveReload,
+    :live_reload_port => 8988
+  )
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
