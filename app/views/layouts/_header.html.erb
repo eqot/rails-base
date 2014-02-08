@@ -17,7 +17,22 @@
       </ul>
 
       <div class="navbar-form navbar-right" role="form">
-        <%= link_to "Sign in", new_user_session_path, class: "btn btn-success" %>
+        <% if user_signed_in? %>
+          <div class="btn-group">
+            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+              <%= current_user.username %>
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li role="presentation"><%= link_to "Profile" %></li>
+              <li role="presentation"><%= link_to "Settings", edit_user_registration_path %></li>
+              <li role="presentation" class="divider"></li>
+              <li role="presentation"><%= link_to "Sign out", destroy_user_session_path, method: "delete" %></li>
+            </ul>
+          </div>
+        <% else %>
+          <%= link_to "Sign in", new_user_session_path, class: "btn btn-success" %>
+        <% end %>
       </div>
     </div>
   </div>
