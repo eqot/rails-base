@@ -30,6 +30,8 @@ end
 
 group :test do
   gem 'capybara', '2.2.1'
+
+  gem 'factory_girl_rails'
 end
 
 # Use device for account management
