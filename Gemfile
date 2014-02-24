@@ -43,6 +43,10 @@ gem 'sass-rails', '~> 4.0.0'
 # Use bootstrap-sass for views
 gem 'bootstrap-sass', '~> 3.1.0'
 
+# Use pagenate
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
