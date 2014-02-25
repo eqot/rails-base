@@ -35,6 +35,7 @@ set :linked_files, %w{config/database.yml}
 # set :keep_releases, 5
 
 namespace :deploy do
+  after :publishing, :restart
 
   set :unicorn_pid, "/var/tmp/unicorn.pid"
   set :unicorn_config, "#{current_path}/config/unicorn.conf.rb"
@@ -79,5 +80,4 @@ namespace :deploy do
   after :finished, :notify do
     system("which -s growlnotify && growlnotify -n 'Capistrano' -t 'Capistrano' -m 'Completed.'")
   end
-
 end
