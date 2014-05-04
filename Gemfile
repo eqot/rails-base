@@ -34,8 +34,10 @@ group :test do
   gem 'factory_girl_rails'
 end
 
-# Use device for account management
+# Use device and omniauth for account management
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
