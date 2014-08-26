@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
-ruby '2.1.1'
-#ruby-gemset=rails_4_1_1
+ruby '2.1.2'
+#ruby-gemset=rails_4_1_5
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
